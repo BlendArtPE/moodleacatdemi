@@ -52,8 +52,11 @@ if ($mform->is_cancelled()) {
     $new_user_id = $DB->insert_record('user',$data);
 
     $date->userid = $new_user_id;
+
     $date->birthdate = date('Y-m-d', $fecha);
-    
+
+    echo 'Nombre de usuario: ', $date->userid;
+    echo 'Fecha: ', $date->birthdate;
     $DB->insert_record('dates',$date);
     
     
