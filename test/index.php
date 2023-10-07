@@ -53,8 +53,7 @@ if ($mform->is_cancelled()) {
 
     $date->userid = $new_user_id;
     $date->birthdate = date('Y-m-d', $fecha);
-    echo 'El dato se va a guardar';
-    die;
+    
     $DB->insert_record('dates',$date);
     
     
